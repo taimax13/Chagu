@@ -1,7 +1,5 @@
-# chainguard/tests/test_encryption.py
-
 import unittest
-from chainguard.encryption.AESCipher import AESCipher
+from chainguard.encryption import AESCipher
 
 
 class TestAESCipher(unittest.TestCase):

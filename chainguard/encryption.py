@@ -1,9 +1,3 @@
-# Key Derivation: The key for AES is derived using PBKDF2 with SHA256, which helps ensure that even weak passwords are turned into secure encryption keys.
-# Padding: Since AES is a block cipher, the plaintext must be padded to a multiple of the block size. This example uses PKCS7 padding.
-# Cipher Mode: CBC (Cipher Block Chaining) mode is used, which requires an Initialization Vector (IV) to add randomness to the encryption process. The IV is stored alongside the encrypted data.
-
-# chainguard/encryption.py
-
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
