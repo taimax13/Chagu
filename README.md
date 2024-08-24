@@ -3,6 +3,10 @@
 
 ChainGuard is a custom protocol designed for secure data transformation using blockchain technology. It leverages AES encryption for confidentiality and plans to integrate blockchain for data integrity and traceability.
 
+https://pypi.org/project/chagu/
+```commandline
+    pip install chainguard
+```
 ## Features
 - AES Encryption and Decryption
 - (Planned) Blockchain Integration
