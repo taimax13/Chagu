@@ -61,7 +61,7 @@ class Scanner:
 
 def main():
     # Replace 'YOUR_SHODAN_API_KEY' with your actual Shodan API key
-    api_key = 'BYYw8iV7KwSRyfmgVsSlEXQun0wUIMn0'
+    api_key = 'BYYw8iV7KwSRnngVsSlEXQun0wUIMn0'
 
     # Create a Scanner instance
     scanner = Scanner(api_key)
