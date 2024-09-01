@@ -13,6 +13,18 @@ graph TD
     I[Anomaly Detection Results] --> |Stored in| C
     F --> |Interaction| B
 
+    %% Define colors
+    style A fill:#FFDDC1,stroke:#333,stroke-width:2px,color:#333;
+    style B fill:#C1E1C5,stroke:#333,stroke-width:2px,color:#333;
+    style C fill:#F9EBEA,stroke:#333,stroke-width:2px,color:#333;
+    style D fill:#D4E6F1,stroke:#333,stroke-width:2px,color:#333;
+    style E fill:#FCF3CF,stroke:#333,stroke-width:2px,color:#333;
+    style F fill:#FADBD8,stroke:#333,stroke-width:2px,color:#333;
+    style G fill:#D5DBDB,stroke:#333,stroke-width:2px,color:#333;
+    style H fill:#AED6F1,stroke:#333,stroke-width:2px,color:#333;
+    style I fill:#F5CBA7,stroke:#333,stroke-width:2px,color:#333;
+
+
 ```
 ### Nodes:
 
