@@ -12,6 +12,8 @@ graph TD
     H[Blockchain Network] --> |Records Transactions| E
     I[Anomaly Detection Results] --> |Stored in| C
     F --> |Interaction| B
+    F --> |Logged Transaction| J[Genesis Block in Blockchain]
+    J --> |Creates Trace| K[Transaction Trace in Neo4j]
 
     %% Define colors
     style A fill:#FFDDC1,stroke:#333,stroke-width:2px,color:#333;
@@ -23,7 +25,8 @@ graph TD
     style G fill:#D5DBDB,stroke:#333,stroke-width:2px,color:#333;
     style H fill:#AED6F1,stroke:#333,stroke-width:2px,color:#333;
     style I fill:#F5CBA7,stroke:#333,stroke-width:2px,color:#333;
-
+    style J fill:#FFD700,stroke:#333,stroke-width:2px,color:#333;  %% Genesis Block - Gold
+    style K fill:#C0C0C0,stroke:#333,stroke-width:2px,color:#333;  %% Transaction Trace - Silver
 
 ```
 ### Nodes:
