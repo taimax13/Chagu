@@ -1,0 +1,4 @@
+IP,Port,Hostnames,OS,Timestamp
+192.168.1.1,80,example.com,Linux,2024-09-01T12:00:00Z
+192.168.1.2,22,,Unknown,2024-09-01T12:01:00Z
+
