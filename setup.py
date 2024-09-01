@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="chagu",
-    version="0.1.0",
+    version="0.1.1",
     author="Talex maxim",
     author_email="taimax13@gmail.com",
     description="ChainGuard: A Secure Data Transformation and Transfer Protocol using Blockchain Technology",

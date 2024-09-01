@@ -14,29 +14,29 @@ graph TD
     F --> |Interaction| B
 
 ```
-# Nodes:
+### Nodes:
 
-## Network Traffic Data: Represents the source of data that is analyzed by the anomaly detection model.
-## Anomaly Detection Model: Scans network traffic data to flag anomalies.
-## Anomaly Node in Neo4j: Represents flagged anomalies stored as nodes in the Neo4j database.
-## Blockchain Transaction: Represents a transaction recorded in the blockchain.
-## Blockchain Node in Neo4j: Represents a blockchain transaction stored as a node in Neo4j.
-## Secure Data Transfer: Represents the secure transfer of data between nodes.
-## AES Encryption: The method used to encrypt and decrypt the data during transfer.
-## Blockchain Network: The network where transactions are recorded.
-## Anomaly Detection Results: Results of anomaly detection stored in Neo4j.
+ Network Traffic Data: Represents the source of data that is analyzed by the anomaly detection model.
+ Anomaly Detection Model: Scans network traffic data to flag anomalies.
+ Anomaly Node in Neo4j: Represents flagged anomalies stored as nodes in the Neo4j database.
+ Blockchain Transaction: Represents a transaction recorded in the blockchain.
+ Blockchain Node in Neo4j: Represents a blockchain transaction stored as a node in Neo4j.
+ Secure Data Transfer: Represents the secure transfer of data between nodes.
+ AES Encryption: The method used to encrypt and decrypt the data during transfer.
+ Blockchain Network: The network where transactions are recorded.
+ Anomaly Detection Results: Results of anomaly detection stored in Neo4j.
 
-# Relationships:
+### Relationships:
 
-## Scanned by: Indicates the process of scanning network traffic data by the anomaly detection model.
-## Flags anomalies: Shows that the model flags anomalies and creates corresponding nodes in Neo4j.
-## DETECTED_IN: Relationship between an anomaly and a blockchain transaction where the anomaly was detected.
-## Sends encrypted data: Indicates the data transfer process using AES encryption.
-## Receives encrypted data: Represents the reception of encrypted data.
-## Records Transactions: Indicates that the blockchain network records transactions in the blockchain.
-## Stored in: Represents the storage of anomaly detection results in the Neo4j graph database.
-## Interaction: Shows the interaction between secure data transfer and the anomaly detection model.
-## ChainGuard is a custom protocol designed for secure data transformation using blockchain technology. It leverages AES encryption for confidentiality and plans to integrate blockchain for data integrity and traceability.
+ Scanned by: Indicates the process of scanning network traffic data by the anomaly detection model.
+ Flags anomalies: Shows that the model flags anomalies and creates corresponding nodes in Neo4j.
+ DETECTED_IN: Relationship between an anomaly and a blockchain transaction where the anomaly was detected.
+ Sends encrypted data: Indicates the data transfer process using AES encryption.
+ Receives encrypted data: Represents the reception of encrypted data.
+ Records Transactions: Indicates that the blockchain network records transactions in the blockchain.
+ Stored in: Represents the storage of anomaly detection results in the Neo4j graph database.
+ Interaction: Shows the interaction between secure data transfer and the anomaly detection model.
+ ChainGuard is a custom protocol designed for secure data transformation using blockchain technology. It leverages AES encryption for confidentiality and plans to integrate blockchain for data integrity and traceability.
 
 https://pypi.org/project/chagu/
 ```commandline
