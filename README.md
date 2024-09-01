@@ -3,30 +3,56 @@
 
 ```mermaid
 graph TD
-    A[Network Traffic Data] --> |Scanned by| B[Anomaly Detection Model]
-    B --> |Flags anomalies| C[Anomaly Node in Neo4j]
-    D[Blockchain Transaction] --> |Recorded in| E[Blockchain Node in Neo4j]
-    C --> |DETECTED_IN| E
-    F[Secure Data Transfer] --> |Sends encrypted data| G[AES Encryption]
-    G --> |Receives encrypted data| F
-    H[Blockchain Network] --> |Records Transactions| E
-    I[Anomaly Detection Results] --> |Stored in| C
-    F --> |Interaction| B
-    F --> |Logged Transaction| J[Genesis Block in Blockchain]
-    J --> |Creates Trace| K[Transaction Trace in Neo4j]
+    subgraph Users and Entities
+        A[User]:::userColor
+        B[Entity]:::userColor
+    end
 
-    %% Define colors
-    style A fill:#FFDDC1,stroke:#333,stroke-width:2px,color:#333;
-    style B fill:#C1E1C5,stroke:#333,stroke-width:2px,color:#333;
-    style C fill:#F9EBEA,stroke:#333,stroke-width:2px,color:#333;
-    style D fill:#D4E6F1,stroke:#333,stroke-width:2px,color:#333;
-    style E fill:#FCF3CF,stroke:#333,stroke-width:2px,color:#333;
-    style F fill:#FADBD8,stroke:#333,stroke-width:2px,color:#333;
-    style G fill:#D5DBDB,stroke:#333,stroke-width:2px,color:#333;
-    style H fill:#AED6F1,stroke:#333,stroke-width:2px,color:#333;
-    style I fill:#F5CBA7,stroke:#333,stroke-width:2px,color:#333;
-    style J fill:#FFD700,stroke:#333,stroke-width:2px,color:#333;  %% Genesis Block - Gold
-    style K fill:#C0C0C0,stroke:#333,stroke-width:2px,color:#333;  %% Transaction Trace - Silver
+    subgraph Data Request and Transfer
+        C[Data Requested]:::dataColor
+        D[Data Sent]:::dataColor
+        E[Data Received]:::dataColor
+    end
+
+    subgraph Secure Transmission
+        F[AES Encryption]:::encryptionColor
+        G[Secure Data Transfer]:::encryptionColor
+    end
+
+    subgraph Anomaly Detection
+        H[Anomaly Detection Model]:::anomalyColor
+    end
+
+    subgraph Blockchain and Traceability
+        I[Blockchain Transaction]:::blockchainColor
+        J[Blockchain Ledger]:::blockchainColor
+        K[Neo4j Trace]:::traceColor
+    end
+
+    %% Flow of Data
+    A -->|Requests Data| C
+    C -->|Encrypted with AES| F
+    F -->|Transfers Data Securely| G
+    G -->|Data Sent| D
+    D -->|Logs Transaction| I
+    I -->|Recorded in Ledger| J
+    I -->|Creates Trace| K
+    D -->|Receives Data| E
+    E -->|Analyzes Data| H
+    H -->|Flags Anomalies| K
+    B -->|Receives Data| E
+
+    %% Highlight Flow Arrows
+    classDef flowColor stroke:#FF5733,stroke-width:4px;
+    class C,F,G,D,I,J,K flowColor;
+
+    %% Define Colors
+    classDef userColor fill:#FFDDC1,stroke:#333,stroke-width:2px,color:#333;
+    classDef dataColor fill:#C1E1C5,stroke:#333,stroke-width:2px,color:#333;
+    classDef encryptionColor fill:#FADBD8,stroke:#333,stroke-width:2px,color:#333;
+    classDef anomalyColor fill:#F9EBEA,stroke:#333,stroke-width:2px,color:#333;
+    classDef blockchainColor fill:#D4E6F1,stroke:#333,stroke-width:2px,color:#333;
+    classDef traceColor fill:#FCF3CF,stroke:#333,stroke-width:2px,color:#333;
 
 ```
 ### Nodes:
