@@ -184,6 +184,10 @@ loss, accuracy = anomaly_model.evaluate(X_test, y_test)
 print(f'Test Accuracy: {accuracy:.4f}')
 ```
 
+
+
+
+
 Dependencies
 Python 3.x
 TensorFlow
@@ -192,7 +196,10 @@ Scikit-learn
 Pandas
 Installation
 Install the required packages using pip:
-
+```mermaid
+ python setup.py sdist bdist_wheel 
+ twine upload dist/*
+```
 Conclusion
 The Sequential model is a great choice for this anomaly detection task due to its simplicity,
 ease of use, and the linear nature of the problem. This approach ensures that the model is easy
